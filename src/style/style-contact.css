@@ -1,0 +1,95 @@
+/* Namespace: INFO PAGE */
+
+.info-body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+/* SECTION KONTAK + MAP */
+.info-contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 100px auto 50px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* PETA GOOGLE */
+.info-map-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BOX KONTAK */
+.info-contact-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.info-contact-box h2 {
+  margin-top: 0;
+}
+
+.info-contact-box .contact-info p {
+  margin: 10px 0;
+}
+
+.info-socials {
+  margin-top: 20px;
+}
+
+.info-socials a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #f07a19;
+  transition: transform 0.3s ease;
+}
+
+.info-socials a:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .info-contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 80px;
+  }
+
+  .info-map-container,
+  .info-contact-box {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .info-map-container iframe {
+    height: 300px;
+  }
+
+  .info-contact-box {
+    padding: 20px;
+  }
+
+  .info-socials a {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+}

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from './pages/home'
+import Mitigasi from './pages/mitigasi'
+import Input from './pages/input'
+import Cuaca from './pages/cuaca'
+import Contact from './pages/contact'
+import Login from './pages/login'
+import Data from './pages/data'
+import Maps from './pages/maps'
+import Dashboard from './pages/dashboard'
+import EditLaporan from './pages/edit'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <BrowserRouter>
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/mitigasi' element={<Mitigasi/>}/>
+    <Route path='/input' element={<Input/>}/>
+    <Route path='/cuaca' element={<Cuaca/>}/>
+    <Route path='/contact' element={<Contact/>}/>
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/data' element={<Data/>}/>
+    <Route path='/maps' element={<Maps/>}/>
+    <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/edit/:id" element={<EditLaporan />} />
+
+  </Routes>
+  </BrowserRouter>  
+      
+  
+  )
 }
 
-export default App;
+export default App

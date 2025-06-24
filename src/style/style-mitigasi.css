@@ -1,0 +1,170 @@
+.mitigasi-page {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #fefefe, #e6ecf0);
+  transition: background 0.5s ease;
+}
+
+.mitigasi-page .container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.mitigasi-page h1 {
+  color: #000000;
+  margin-bottom: 5px;
+  font-size: 2.0rem;
+}
+
+.mitigasi-page .pdf-button {
+  margin-bottom: 5px;
+}
+
+.mitigasi-page .btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.mitigasi-page .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 91, 187, 0.4);
+}
+
+.mitigasi-page .carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.mitigasi-page .carousel-track-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.mitigasi-page .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.mitigasi-page .carousel-slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mitigasi-page .carousel-slide img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.mitigasi-page .prev,
+.mitigasi-page .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.mitigasi-page .prev {
+  left: 10px;
+}
+
+.mitigasi-page .next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .mitigasi-page .container {
+    padding: 10px;
+  }
+
+  .mitigasi-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .mitigasi-page .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .mitigasi-page .carousel {
+    flex-direction: column;
+  }
+
+  .mitigasi-page .carousel-track-container {
+    padding: 0 20px; /* kurangi padding agar tidak overflow */
+  }
+
+  .mitigasi-page .carousel-slide img {
+    max-height: 250px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .mitigasi-page .prev,
+  .mitigasi-page .next {
+    font-size: 1.5rem;
+    padding: 8px;
+    top: 90%; /* geser ke bawah */
+    transform: translateY(-50%);
+  }
+
+  .mitigasi-page .prev {
+    left: 20px;
+  }
+
+  .mitigasi-page .next {
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mitigasi-page h1 {
+    font-size: 1.3rem;
+  }
+
+  .mitigasi-page .btn {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .mitigasi-page .carousel-slide img {
+    max-height: 200px;
+  }
+
+  .mitigasi-page .prev,
+  .mitigasi-page .next {
+    top: 92%;
+    font-size: 1.3rem;
+  }
+}

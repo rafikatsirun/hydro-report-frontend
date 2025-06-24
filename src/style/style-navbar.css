@@ -1,0 +1,196 @@
+/* ===========================
+   NAVBAR
+   =========================== */
+.navbar {
+    background-color: #f07a19; /* orange */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffedcc;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.logout-link {
+  cursor: pointer;
+  color: white;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.logout-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.logout-link:hover {
+  color: #ffedcc;
+}
+
+.logout-link:hover::after {
+  width: 100%;
+}
+
+.logout-button {
+  background-color: white;
+  color: #f07a19;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ffedcc;
+  color: #d65f00;
+}
+
+/* Untuk toggle button saat mobile */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Navigasi default */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    background: none;
+    border: none;
+    z-index: 110;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #f07a19, #f3a84c);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 1rem;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .navbar a,
+  .logout-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.4rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .navbar a:hover,
+  .logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .logout-button {
+    margin-top: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+
