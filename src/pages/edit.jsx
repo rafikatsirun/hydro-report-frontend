@@ -37,7 +37,7 @@ const EditLaporan = () => {
     const fetchLaporan = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`http://localhost:8000/api/laporan/${id}`, {
+        const res = await axios.get(`http://103.27.206.43:8000/api/laporan/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFormData(res.data);
@@ -109,7 +109,7 @@ const EditLaporan = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`http://localhost:8000/api/laporan/${id}`, formData, {
+      await axios.put(`http://103.27.206.43:8000/api/laporan/${id}`, formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Laporan berhasil diperbarui!");

@@ -22,7 +22,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/login', loginData);
+      const response = await axios.post('http://103.27.206.43:8000/api/login', loginData);
       const { token, user } = response.data;
 
       localStorage.setItem('token', token);
@@ -44,7 +44,7 @@ const LoginPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8000/api/register', registerData);
+      await axios.post('http://103.27.206.43:8000/api/register', registerData);
       alert('Registrasi berhasil');
       setIsLogin(true);
     } catch (error) {

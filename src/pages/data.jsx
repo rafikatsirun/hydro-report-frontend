@@ -15,7 +15,7 @@ const DataPelaporan = () => {
   useEffect(() => {
     const fetchLaporan = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/laporan");
+        const response = await axios.get("http://103.27.206.43:8000/api/laporan");
         setLaporans(response.data);
       } catch (error) {
         console.error("Gagal mengambil data laporan:", error);
@@ -29,7 +29,7 @@ const DataPelaporan = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:8000/api/laporan/${id}/status`,
+        `http://103.27.206.43:8000/api/laporan/${id}/status`,
         {
           status_laporan: newStatus,
         },
@@ -58,7 +58,7 @@ const DataPelaporan = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:8000/api/laporan/${id}`, {
+      await axios.delete(`http://103.27.206.43:8000/api/laporan/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

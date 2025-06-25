@@ -143,7 +143,7 @@ const MapPage = () => {
       });
 
     // Fetch laporan dan tampilkan sebagai marker cluster
-    fetch("http://localhost:8000/api/laporan")
+    fetch("http://103.27.206.43:8000/api/laporan")
       .then((res) => res.json())
       .then((data) => {
         data.forEach((laporan) => {

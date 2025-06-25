@@ -10,7 +10,7 @@ const Dashboard = () => {
     const fetchStatistik = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get('http://localhost:8000/api/statistik', {
+        const response = await axios.get('http://103.27.206.43:8000/api/statistik', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

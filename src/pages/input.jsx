@@ -115,7 +115,7 @@ const FormInput = () => {
         ? { headers: { Authorization: `Bearer ${token}` } }
         : {};
 
-      await axios.post("http://localhost:8000/api/laporan", formData, config);
+      await axios.post("http://103.27.206.43:8000/api/laporan", formData, config);
 
       alert("Laporan berhasil dikirim!");
       setFormData({
